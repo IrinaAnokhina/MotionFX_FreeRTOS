@@ -54,6 +54,7 @@ motionfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 motionfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 motionfx\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 motionfx\main.o: ../Inc/crc.h
+motionfx\main.o: ../Inc/tim.h
 motionfx\main.o: ../Inc/gpio.h
 motionfx\main.o: ../Inc/app_x-cube-mems1.h
 motionfx\main.o: ../Inc/Sensor.h

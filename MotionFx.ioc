@@ -1,6 +1,7 @@
 #MicroXplorer Configuration settings - do not modify
-FREERTOS.IPParameters=Tasks01,configMINIMAL_STACK_SIZE,configUSE_TRACE_FACILITY,configGENERATE_RUN_TIME_STATS,configUSE_TIMERS,Timers01
-FREERTOS.Tasks01=defaultTask,0,128,StartDefaultTask,Default,NULL
+FREERTOS.FootprintOK=true
+FREERTOS.IPParameters=Tasks01,configMINIMAL_STACK_SIZE,configUSE_TRACE_FACILITY,configGENERATE_RUN_TIME_STATS,configUSE_TIMERS,Timers01,FootprintOK
+FREERTOS.Tasks01=defaultTask,0,256,StartDefaultTask,Default,NULL,Dynamic,NULL,NULL;SensorTask,-3,512,StartSensorTask,Default,NULL,Dynamic,NULL,NULL
 FREERTOS.Timers01=ALGO_TIM,Callback_ALGO_TIM,osTimerPeriodic,Default,NULL,Dynamic,NULL
 FREERTOS.configGENERATE_RUN_TIME_STATS=1
 FREERTOS.configMINIMAL_STACK_SIZE=1024
@@ -157,7 +158,7 @@ ProjectManager.StackSize=0x8000
 ProjectManager.TargetToolchain=MDK-ARM V5
 ProjectManager.ToolChainLocation=
 ProjectManager.UnderRoot=false
-ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false,3-MX_CRC_Init-CRC-false-HAL-true,4-MX_I2C1_Init-I2C1-false-HAL-true,5-MX_TIM3_Init-TIM3-false-HAL-true,6-MX_USART2_UART_Init-USART2-false-HAL-true
+ProjectManager.functionlistsort=1-MX_GPIO_Init-GPIO-false-HAL-true,2-SystemClock_Config-RCC-false-HAL-false,3-MX_CRC_Init-CRC-false-HAL-true,4-MX_I2C1_Init-I2C1-false-HAL-true,4-MX_TIM3_Init-TIM3-false-HAL-true,6-MX_USART2_UART_Init-USART2-false-HAL-true
 RCC.48MHZClocksFreq_Value=48000000
 RCC.AHBFreq_Value=84000000
 RCC.APB1CLKDivider=RCC_HCLK_DIV2

@@ -50,6 +50,7 @@
 
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
+osThreadId SensorTaskHandle;
 osTimerId ALGO_TIMHandle;
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,6 +59,7 @@ osTimerId ALGO_TIMHandle;
 /* USER CODE END FunctionPrototypes */
 
 void StartDefaultTask(void const * argument);
+void StartSensorTask(void const * argument);
 void Callback_ALGO_TIM(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -144,8 +146,12 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 256);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+
+  /* definition and creation of SensorTask */
+  osThreadDef(SensorTask, StartSensorTask, osPriorityIdle, 0, 512);
+  SensorTaskHandle = osThreadCreate(osThread(SensorTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -165,7 +171,7 @@ void StartDefaultTask(void const * argument)
 
   /* init code for MEMS */
   MX_MEMS_Init();
-  osTimerStart(ALGO_TIMHandle, 10);
+
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
   for(;;)
@@ -173,6 +179,25 @@ void StartDefaultTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
+}
+
+/* USER CODE BEGIN Header_StartSensorTask */
+/**
+* @brief Function implementing the SensorTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartSensorTask */
+void StartSensorTask(void const * argument)
+{
+  /* USER CODE BEGIN StartSensorTask */
+	osTimerStart(ALGO_TIMHandle, 10);
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END StartSensorTask */
 }
 
 /* Callback_ALGO_TIM function */

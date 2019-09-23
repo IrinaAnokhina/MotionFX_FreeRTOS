@@ -21,7 +21,7 @@
 
  void Init_Sensors(void);
  void Lib_Process(void);
- void lib_init(TIM_HandleTypeDef* AlgoTimHandle);
+ void lib_init();
  void Lib_ReadRequest(void);
  void FX_Data_Handler(void);
  void Accelero_Sensor_Handler(uint32_t Instance);

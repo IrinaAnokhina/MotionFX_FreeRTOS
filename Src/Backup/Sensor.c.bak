@@ -26,7 +26,7 @@ int lib_version_len;
 
 }
 
-	void lib_init(TIM_HandleTypeDef* AlgoTimHandle)
+	void lib_init()
 	{
 		/* Sensor Fusion API initialization function */
   MotionFX_manager_init();
@@ -37,7 +37,7 @@ int lib_version_len;
 		 /* Enable magnetometer calibration */
   MotionFX_manager_MagCal_start(ALGO_PERIOD);
 	/*Start timer */
-	HAL_TIM_Base_Start_IT(AlgoTimHandle);
+	//HAL_TIM_Base_Start_IT(AlgoTimHandle);
 	/*Start fusion calibration */
 	 MotionFX_manager_start_9X();
 		
@@ -61,7 +61,12 @@ void Lib_Process(void)
 
 void Lib_ReadRequest()
 {
-	SensorReadRequest = 1;
+	//SensorReadRequest = 1;
+	Accelero_Sensor_Handler(IKS01A2_LSM6DSL_0);
+      Gyro_Sensor_Handler(IKS01A2_LSM6DSL_0);
+      Magneto_Sensor_Handler(IKS01A2_LSM303AGR_MAG_0);
+			 /* Sensor Fusion specific part */
+      FX_Data_Handler();
 }
 
  void FX_Data_Handler()
@@ -188,10 +193,10 @@ void Lib_ReadRequest()
 
 }
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  if (htim->Instance == TIM3)
-  {
-    Lib_ReadRequest();
-  }
-}
+//void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+//{
+//  if (htim->Instance == TIM3)
+//  {
+//    Lib_ReadRequest();
+//  }
+//}

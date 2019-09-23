@@ -94,7 +94,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_CRC_Init();
- // MX_TIM3_Init();
+  //MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
 	
 	lib_init();
@@ -162,6 +162,8 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+
+/* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
 

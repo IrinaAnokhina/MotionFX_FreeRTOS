@@ -1,0 +1,13 @@
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+motionfx\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+motionfx\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+motionfx\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+motionfx\heap_4.o: ../Inc/FreeRTOSConfig.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+motionfx\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

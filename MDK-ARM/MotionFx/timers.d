@@ -1,0 +1,15 @@
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/timers.c
+motionfx\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+motionfx\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+motionfx\timers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+motionfx\timers.o: ../Inc/FreeRTOSConfig.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+motionfx\timers.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h

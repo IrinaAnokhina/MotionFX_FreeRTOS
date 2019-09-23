@@ -1,0 +1,14 @@
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+motionfx\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+motionfx\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+motionfx\croutine.o: ../Inc/FreeRTOSConfig.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+motionfx\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
